@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  DEV ONLY: allows the app to talk to your Spring Boot backend over plain
+  HTTP (no TLS) while it's running on your local machine/LAN.
+  Android blocks cleartext traffic by default from API 28+, which is why
+  the app couldn't reach the server even though config.js had the right IP.
+
+  Before shipping a real release build, replace this with HTTPS on the
+  backend and remove cleartextTrafficPermitted="true".
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>

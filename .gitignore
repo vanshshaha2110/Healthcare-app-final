@@ -1,0 +1,14 @@
+node_modules/
+healthcare-backend.zip
+healthcare-ui.zip
+.env
+**/.env
+venv/
+**/venv/
+__pycache__/
+**/__pycache__/
+target/
+**/target/
+.idea/
+.vscode/
+*.log
