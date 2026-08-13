@@ -8,12 +8,13 @@ load_dotenv()
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 # Default to gemini-flash-latest with reliable fallbacks
-DEFAULT_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.5-flash")
+DEFAULT_MODEL = os.getenv("GEMINI_MODEL", "gemini-1.5-flash")
 FALLBACK_MODELS = [
     DEFAULT_MODEL,
-    "gemini-3.5-flash",
-    "gemini-3.6-flash",
-    "gemini-flash-latest"
+    "gemini-1.5-flash",
+    "gemini-2.0-flash",
+    "gemini-1.5-pro",
+    "gemini-1.0-pro"
 ]
 
 

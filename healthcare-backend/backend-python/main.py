@@ -9,10 +9,9 @@ import file_utils
 
 app = FastAPI(title="Healthcare AI Service")
 
-# Only Spring Boot should call this service - don't expose it publicly.
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:8080"],
+    allow_origins=["*"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
